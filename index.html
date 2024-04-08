@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 10px;
+      }
+      body {
+        font-family: inter, sans-serif;
+        background-color: black;
+        color: white;
+      }
+      /* common styles */
+      img {
+        width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: white;
+      }
+      .description {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #7d7d7d;
+      }
+      .tittle {
+        color: #04bfad;
+        font-weight: 7px;
+        font-size: 3.5rem;
+        text-transform: uppercase;
+      }
+      /* layouts */
+      .container {
+        max-width: 1000px;
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        padding: 5rem;
+        background: #070707;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+      }
+      @media only screen and (max-width: 768px) {
+        .container {
+          width: 100%;
+          grid-template-columns: 1fr;
+          padding: 3rem;
+          gap: 7rem;
+        }
+      }
+
+      .profile {
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
+      }
+      .group-1,
+      .group-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+      }
+      /* profile */
+      .profile_conainer {
+        display: flex;
+        gap: 2rem;
+      }
+      .profile_conainer {
+        max-width: 250px;
+      }
+      .profile_name_firstname {
+        color: white;
+        font-weight: 200;
+        font-size: clamp(2rem, 8vw, 4rem);
+        text-transform: uppercase;
+        text-align: left;
+        display: block;
+        margin-bottom: -0.8rem;
+      }
+      .profile_name_lastname {
+        color: var(--primary-color);
+        font-weight: 700;
+        font-size: clamp(2.5rem, 15vw, 7rem);
+        text-transform: uppercase;
+        display: block;
+      }
+      .profile_tittle {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      .downloadbtn {
+        display: block;
+        text-decoration: underline;
+        font-size: 1.6rem;
+        margin-top: 1rem;
+      }
+      .downloadbtn:hover {
+        columns: var(--primary-color);
+      }
+      @media only screen and (max-width: 768px) {
+        .profile_container {
+          flex-direction: column;
+        }
+      }
+      /* Habilidades */
+      .Habilidades_lista_descricao {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: #7d7d7d;
+      }
+      .habilidades {
+        margin-top: 2rem;
+      }
+      /* carreira */
+      .carreira {
+        margin-top: 2rem;
+      }
+      .carreira_name {
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-top: 2rem;
+        color: #c1d4d9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="profile">
+        <div class="profile container">
+          <div class="profile_profileimage">
+            <img src="./Images/hamilton.jpg" alt="Hamilton" />
+          </div>
+          <div>
+            <h1 class="profile_name">
+              <span class="profile_name_firstname">Lewis</span>
+              <span class="profile_name_lastname">Hamilton</span>
+            </h1>
+            <p class="profile_tittle">Automobilista</p>
+            <p class="description">
+              Lewis Hamilton é um piloto de corrida profissional britânico
+              nascido em 7 de janeiro de 1985. Ele é conhecido por sua
+              carreira de sucesso na Fórmula 1, onde atualmente compete pela
+              equipe Mercedes-AMG Petronas Formula One Team. Hamilton é
+              reconhecido como um dos maiores pilotos da história da Fórmula 1,
+              tendo conquistado múltiplos campeonatos mundiais e estabelecido
+              diversos recordes ao longo de sua carreira.
+            </p>
+            <a href=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="group-1">
+        <div class="Dados_Pesoais">
+          <h3 class="tittle">Dados Pessoais</h3>
+          <ul class="Habilidades_lista_descricao">
+            <li>Nome completo: Lewis Carl Davidson Hamilton</li>
+            <li>Data de nascimento: 7 de janeiro de 1985</li>
+            <li>Local de nascimento: Stevenage, Hertfordshire, Inglaterra</li>
+            <li>Nacionalidade: Britânica</li>
+          </ul>
+        </div>
+        <div>
+          <div class="habilidades">
+            <h3 class="tittle">Habilidades</h3>
+            <ul class="Habilidades_lista_descricao">
+              <li>Expertise em corridas de alta velocidade.</li>
+              <li>Controle excepcional do veículo e estratégia de corrida.</li>
+              <li>Fortes habilidades de trabalho em equipe e comunicação.</li>
+              <li>Adaptabilidade e tomada de decisões rápidas sob pressão.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="carreira">
+          <h3 class="tittle">Carreira</h3>
+          <div class="carreira_item">
+            <h4 class="carreira_name">Início na Karting:</h4>
+            <p class="description">
+              Hamilton começou sua carreira automobilística competindo no
+              karting aos 8 anos de idade, inspirado por seu pai Anthony
+              Hamilton, que trabalhava em três empregos para apoiar sua paixão
+              pelo karting.
+            </p>
+          </div>
+          <div>
+            <div class="carreira_item">
+              <h4 class="carreira_name">Fórmula Renault e Fórmula 3:</h4>
+              <ul class="Habilidades_lista_descricao">
+                <li>
+                  Em 2001, Lewis ingressou na equipe de karting da Zip Young
+                  Guns.
+                </li>
+                <li>
+                  Em 2002, Hamilton se juntou à equipe de karting da MBM.com.
+                </li>
+                <li>
+                  Em 2003, Lewis assinou com a Manor Motorsport para competir na
+                  Fórmula Renault.
+                </li>
+                <li>
+                  Em 2005, Hamilton competiu na Fórmula 3 Euro Series pela ASM
+                  Formule 3.
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div class="carreira_item">
+                <h4 class="carreira_name">Fórmula 1:</h4>
+                <ul class="Habilidades_lista_descricao">
+                  <li>
+                    Em 2007, Lewis Hamilton estreou na Fórmula 1 pela equipe
+                    McLaren, tornando-se o primeiro piloto negro a competir na
+                    categoria.
+                  </li>
+                  <li>
+                    Hamilton teve uma estreia impressionante, terminando em
+                    terceiro lugar no Grande Prêmio da Austrália.
+                  </li>
+                  <li>
+                    Em sua temporada de estreia, Hamilton conquistou quatro
+                    vitórias e terminou em segundo lugar no campeonato de
+                    pilotos, perdendo o título para Kimi Räikkönen por apenas um
+                    ponto.
+                  </li>
+                  <li>
+                    Em 2008, Lewis Hamilton conquistou seu primeiro título
+                    mundial na Fórmula 1, tornando-se o campeão mais jovem da
+                    história na época.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <div class="carreira_item">
+                  <h4 class="carreira_name">
+                    Mercedes-AMG Petronas Formula One Team:
+                  </h4>
+                  <ul class="Habilidades_lista_descricao">
+                    <li>
+                      Em 2013, Hamilton transferiu-se para a equipe Mercedes,
+                      onde começou uma parceria bem-sucedida com Nico Rosberg.
+                    </li>
+                    <li>
+                      Em 2014, Hamilton conquistou seu segundo título mundial na
+                      Fórmula 1.
+                    </li>
+                    <li>
+                      Hamilton teve uma temporada excepcional em 2015,
+                      conquistando seu terceiro título mundial.
+                    </li>
+                    <li>
+                      Em 2017, Hamilton conquistou seu quarto título mundial na
+                      Fórmula 1.
+                    </li>
+                    <li>
+                      Em 2018, Lewis Hamilton ganhou seu quinto título mundial,
+                      igualando o feito de Juan Manuel Fangio.
+                    </li>
+                    <li>
+                      Em 2019, Hamilton conquistou seu sexto título mundial.
+                    </li>
+                    <li>
+                      Em 2020, Hamilton venceu seu sétimo título mundial,
+                      igualando o recorde de Michael Schumacher.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group-2">
+        <div class="Educacao">
+          <h3 class="tittle">Educação</h3>
+          <ul class="Habilidades_lista_descricao">
+            <li>
+              Escola Primária John Henry Newman School, Stevenage, Inglaterra
+            </li>
+            <li>Data de nascimento: 7 de janeiro de 1985</li>
+          </ul>
+        </div>
+        <div>
+          <div class="Dados_Pesoais">
+            <h3 class="tittle">Troféus</h3>
+            <ul class="Habilidades_lista_descricao">
+              <li>Campeonato Nacional Britânico de Karting: 1995, 1996</li>
+              <li>Campeonato Europeu de Karting: 1996</li>
+              <li>Campeonato Mundial de Karting: 2000</li>
+              <li>Campeonato de Fórmula Renault Britânica: 2003</li>
+              <li>Campeonato de Fórmula 3 Euro Series: 2005</li>
+              <li>Campeonato GP2 Series: 2006</li>
+              <li>
+                <h4 class="carreira_name">
+                  Campeonato Mundial de Fórmula 1 (FIA):
+                </h4>
+                <ul class="Habilidades_lista_descricao">
+                  <li>2008 (McLaren)</li>
+                  <li>2014 (Mercedes)</li>
+                  <li>2015 (Mercedes)</li>
+                  <li>2017 (Mercedes)</li>
+                  <li>2018 (Mercedes)</li>
+                  <li>2019 (Mercedes)</li>
+                  <li>2020 (Mercedes)</li>
+                  <li>2021 (Mercedes)</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Curiosidades">
+          <h3 class="tittle">Curiosidades</h3>
+          <ul class="Habilidades_lista_descricao">
+            <li>
+              Fora das pistas, Lewis Hamilton tem interesse em música, moda e
+              filantropia.
+            </li>
+            <li>
+              É um ávido defensor dos direitos dos animais e do meio ambiente,
+              promovendo a conscientização sobre questões como a
+              sustentabilidade e a igualdade.
+            </li>
+          </ul>
+        </div>
+        <div class="Curiosidades">
+            <h3 class="tittle">Carro atual F1</h3>
+            <img src="./Images/fo-ogrlwaailhg6-removebg-preview.png" alt="Carro Mercedes-AMG F1 2024">
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
